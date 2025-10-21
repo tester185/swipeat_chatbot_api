@@ -1,0 +1,54 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# dotenv environment variables
+.env
+*.env
+
+# Chroma / database persistence
+# chroma_db/
+# *.db
+# *.sqlite
+# *.parquet
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+*.out
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Node / frontend (if any)
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Optional: coverage / test reports
+.coverage
+htmlcov/
+*.cover
+*.py,cover
