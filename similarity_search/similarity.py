@@ -12,7 +12,6 @@ import numpy as np
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
-from embedder.embedder import embed
 load_dotenv()
 
 hf_token=os.getenv('HUGGINGFACEHUB_API_TOKEN')
