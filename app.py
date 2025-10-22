@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify
-import os
-from ai_chatbot.ai_chatbot import get_response
+from similarity_search.similarity import get_similar
 
 app = Flask(__name__)
 
@@ -10,16 +9,18 @@ def home():
 
 
 @app.route("/ask",methods=["POST"])
-def get_categories():
+def get_similars():
     response=""
     print("sending req")
     if(request.method=="POST"):
         data = request.get_json()
         text = data.get("query")
         print('here')
-        response=get_response(text)
+        response=get_similar(text)
+        doc,score=response[0]
+        pure_doc=doc.page_content
     print('hi')
-    return jsonify({"response":response})
+    return jsonify({"response":{"doc":pure_doc,"score":score}})
     
 
 
